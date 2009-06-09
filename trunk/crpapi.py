@@ -26,22 +26,6 @@ class CRPApiObject(object):
     def __init__(self, d):
         self.__dict__ = d
 
-class Contributor(CRPApiObject):
-    def __str__(self):
-        return '%s %s' % (self.org_name,self.total)
-
-class Industry(CRPApiObject):
-    def __str__(self):
-        return '%s %s' % (self.industry_name,self.total)
-
-class Sector(CRPApiObject):
-    def __str__(self):
-        return '%s %s' % (self.sector_name,self.total)
-
-class Trip(CRPApiObject):
-    def __str__(self):
-        return '%s %s' % (self.traveler,self.destination)
-
 # namespaces #
 
 class CRP(object):
@@ -73,19 +57,19 @@ class CRP(object):
         @staticmethod
         def get(**kwargs):
             results = CRP._apicall('candContrib', kwargs)['contributors']['contributor']
-            return [Contributor(l['@attributes']) for l in results]
+            return results
 
     class candIndustry(object):
         @staticmethod
         def get(**kwargs):
             results = CRP._apicall('candIndustry', kwargs)['industries']['industry']
-            return [Industry(l['@attributes']) for l in results]
+            return results
 
     class candSector(object):
         @staticmethod
         def get(**kwargs):
             results = CRP._apicall('candSector', kwargs)['sectors']['sector']
-            return [Sector(l['@attributes']) for l in results]
+            return results
 
     class candIndByInd(object):
         @staticmethod
@@ -97,4 +81,4 @@ class CRP(object):
         @staticmethod
         def get(**kwargs):
             results = CRP._apicall('memTravelTrips', kwargs)['trips']['trip']
-            return [Trip(l['@attributes']) for l in results]
+            return results

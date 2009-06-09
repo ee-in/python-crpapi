@@ -54,105 +54,22 @@ Candidate Methods:
 		{u'origin': u'Center for Responsive Politics', u'next_election': u'2010', u'debt': u'0', u'last_updated': u'03/31/2009', u'cand_name': u'Pelosi, Nancy', u'cid': u'N00007360', u'spent': u'471725', u'chamber': u'H', u'state': u'CA', u'first_elected': u'1987', u'source': u'http://www.opensecrets.org/politicians/summary.php?cid=N00007360&cycle=2010', u'party': u'D', u'total': u'377304', u'cash_on_hand': u'221291', u'cycle': u'2010'}
 		
 	candContrib:
-		>>> for cont in CRP.candContrib.get(cid='N00007360',cycle='2010'):
-		...		print cont
-		Akin, Gump et al 18400
-		American Dental Assn 10000
-		Hercules Holding 10000
-		Intl Brotherhood of Electrical Workers 10000
-		Machinists/Aerospace Workers Union 10000
-		New York Life Insurance 10000
-		Operating Engineers Union 10000
-		Air Line Pilots Assn 5000
-		American Academy of Dermatology Assn 5000
-		American Fedn of St/Cnty/Munic Employees 5000
-		Amgen Inc 5000
-		Dean Foods 5000
-		Marine Engineers Beneficial Assn 5000
-		Metlife Inc 5000
-		National Beer Wholesalers Assn 5000
-		National Venture Capital Assn 5000
-		Natl Cmte to Preserve Social Security 5000
-		Sony Corp 5000
-		Transport Workers Union 5000
-		United Transportation Union 5000
+		>>> print CRP.candContrib.get(cid='N00007360',cycle='2010')
+		[{u'@attributes': {u'org_name': u'Akin, Gump et al', u'total': u'18400'}}, {u'@attributes': {u'org_name': u'American Dental Assn', u'total': u'10000'}}, {u'@attributes': {u'org_name': u'Hercules Holding', u'total': u'10000'}}, {u'@attributes': {u'org_name': u'Intl Brotherhood of Electrical Workers', u'total': u'10000'}}, {u'@attributes': {u'org_name': u'Machinists/Aerospace Workers Union', u'total': u'10000'}}, {u'@attributes': {u'org_name': u'New York Life Insurance', u'total': u'10000'}}, {u'@attributes': {u'org_name': u'Operating Engineers Union', u'total': u'10000'}}, {u'@attributes': {u'org_name': u'Air Line Pilots Assn', u'total': u'5000'}}, {u'@attributes': {u'org_name': u'American Academy of Dermatology Assn', u'total': u'5000'}}, {u'@attributes': {u'org_name': u'American Fedn of St/Cnty/Munic Employees', u'total': u'5000'}}, {u'@attributes': {u'org_name': u'Amgen Inc', u'total': u'5000'}}, {u'@attributes': {u'org_name': u'Dean Foods', u'total': u'5000'}}, {u'@attributes': {u'org_name': u'Marine Engineers Beneficial Assn', u'total': u'5000'}}, {u'@attributes': {u'org_name': u'Metlife Inc', u'total': u'5000'}}, {u'@attributes': {u'org_name': u'National Beer Wholesalers Assn', u'total': u'5000'}}, {u'@attributes': {u'org_name': u'National Venture Capital Assn', u'total': u'5000'}}, {u'@attributes': {u'org_name': u'Natl Cmte to Preserve Social Security', u'total': u'5000'}}, {u'@attributes': {u'org_name': u'Sony Corp', u'total': u'5000'}}, {u'@attributes': {u'org_name': u'Transport Workers Union', u'total': u'5000'}}, {u'@attributes': {u'org_name': u'United Transportation Union', u'total': u'5000'}}]
 
 	candIndustry:
-		>>> for ind in CRP.candIndustry.get(cid='N00007360',cycle='2010'):
-		...     print ind
-		Lawyers/Law Firms 23400
-		Industrial Unions 22500
-		Transportation Unions 22500
-		Health Professionals 20000
-		Insurance 15000
-		Building Trade Unions 13500
-		Lobbyists 10800
-		Hospitals/Nursing Homes 10000
-		TV/Movies/Music 8000
-		Securities & Investment 7500
-		Public Sector Unions 7000
-		Misc Issues 5000
-		Telecom Services & Equipment 5000
-		Dairy 5000
-		Pharmaceuticals/Health Products 5000
-		Beer, Wine & Liquor 5000
-		Real Estate 3500
-		Accountants 2500
-		Electric Utilities 2500
-		Construction Services 2500
-		Retail Sales 2500
-		Railroads 2500
-		Food & Beverage 2500
-		Misc Business 2500
-		Business Services 1000
-		Misc Defense 1000
-		Automotive 500
-		Environment 500
+		>>> print CRP.candIndustry.get(cid='N00007360',cycle='2010')
+		[{u'@attributes': {u'total': u'23400', u'pacs': u'7500', u'industry_name': u'Lawyers/Law Firms', u'indivs': u'15900'}}, {u'@attributes': {u'total': u'22500', u'pacs': u'22500', u'industry_name': u'Industrial Unions', u'indivs': u'0'}}, {u'@attributes': {u'total': u'22500', u'pacs': u'22500', u'industry_name': u'Transportation Unions', u'indivs': u'0'}}, {u'@attributes': {u'total': u'20000', u'pacs': u'20000', u'industry_name': u'Health Professionals', u'indivs': u'0'}}, {u'@attributes': {u'total': u'15000', u'pacs': u'15000', u'industry_name': u'Insurance', u'indivs': u'0'}}, {u'@attributes': {u'total': u'13500', u'pacs': u'13500', u'industry_name': u'Building Trade Unions', u'indivs': u'0'}}, {u'@attributes': {u'total': u'10800', u'pacs': u'0', u'industry_name': u'Lobbyists', u'indivs': u'10800'}}, {u'@attributes': {u'total': u'10000', u'pacs': u'10000', u'industry_name': u'Hospitals/Nursing Homes', u'indivs': u'0'}}, {u'@attributes': {u'total': u'8000', u'pacs': u'8000', u'industry_name': u'TV/Movies/Music', u'indivs': u'0'}}, {u'@attributes': {u'total': u'7500', u'pacs': u'7500', u'industry_name': u'Securities & Investment', u'indivs': u'0'}}, {u'@attributes': {u'total': u'7000', u'pacs': u'7000', u'industry_name': u'Public Sector Unions', u'indivs': u'0'}}, {u'@attributes': {u'total': u'5000', u'pacs': u'5000', u'industry_name': u'Misc Issues', u'indivs': u'0'}}, {u'@attributes': {u'total': u'5000', u'pacs': u'5000', u'industry_name': u'Telecom Services & Equipment', u'indivs': u'0'}}, {u'@attributes': {u'total': u'5000', u'pacs': u'5000', u'industry_name': u'Dairy', u'indivs': u'0'}}, {u'@attributes': {u'total': u'5000', u'pacs': u'5000', u'industry_name': u'Pharmaceuticals/Health Products', u'indivs': u'0'}}, {u'@attributes': {u'total': u'5000', u'pacs': u'5000', u'industry_name': u'Beer, Wine & Liquor', u'indivs': u'0'}}, {u'@attributes': {u'total': u'3500', u'pacs': u'3500', u'industry_name': u'Real Estate', u'indivs': u'0'}}, {u'@attributes': {u'total': u'2500', u'pacs': u'2500', u'industry_name': u'Accountants', u'indivs': u'0'}}, {u'@attributes': {u'total': u'2500', u'pacs': u'2500', u'industry_name': u'Electric Utilities', u'indivs': u'0'}}, {u'@attributes': {u'total': u'2500', u'pacs': u'2500', u'industry_name': u'Construction Services', u'indivs': u'0'}}, {u'@attributes': {u'total': u'2500', u'pacs': u'2500', u'industry_name': u'Retail Sales', u'indivs': u'0'}}, {u'@attributes': {u'total': u'2500', u'pacs': u'2500', u'industry_name': u'Railroads', u'indivs': u'0'}}, {u'@attributes': {u'total': u'2500', u'pacs': u'2500', u'industry_name': u'Food & Beverage', u'indivs': u'0'}}, {u'@attributes': {u'total': u'2500', u'pacs': u'0', u'industry_name': u'Misc Business', u'indivs': u'2500'}}, {u'@attributes': {u'total': u'1000', u'pacs': u'0', u'industry_name': u'Business Services', u'indivs': u'1000'}}, {u'@attributes': {u'total': u'1000', u'pacs': u'1000', u'industry_name': u'Misc Defense', u'indivs': u'0'}}, {u'@attributes': {u'total': u'500', u'pacs': u'0', u'industry_name': u'Automotive', u'indivs': u'500'}}, {u'@attributes': {u'total': u'500', u'pacs': u'500', u'industry_name': u'Environment', u'indivs': u'0'}}]
 
 	candIndByInd:
 		>>> print CRP.candIndByInd.get(cid='N00007360',cycle='2010',ind='H01')
-		{u'origin': u'Center for Responsive Politics', u'last_updated': u'4/27/09', u'cand_name': u'Pelosi, Nancy', u'cid': u'N00007360', u'industry': u'Health Professionals', u'pacs': u'20000', u'rank': u'0', u'indivs': u'0', u'chamber': u'', u'state': u'California', u'source': u'http://www.opensecrets.org/industries/recips.php?Ind=H01&cycle=2010&recipdetail=&Mem=Y&sortorder=U', u'party': u'D', u'total': u'20000', u'cycle': u'2010'}
+		{u'origin': u'Center for Responsive Politics', u'last_updated': u'4/27/09', u'cand_name': u'Pelosi, Nancy', u'cid': u'N00007360', u'industry': u'Health Professionals', u'pacs': u'20000', u'rank': u'0', u'indivs': u'0', u'chamber': u'H', u'state': u'California', u'source': u'http://www.opensecrets.org/industries/recips.php?Ind=H01&cycle=2010&recipdetail=H&Mem=Y&sortorder=U', u'party': u'D', u'total': u'20000', u'cycle': u'2010'}
 
-		candSector:
-		>>> for sec in CRP.candSector.get(cid='N00007360',cycle='2010'):
-		...     print sec
-		Agribusiness 5000
-		Communic/Electronics 13000
-		Construction 2500
-		Defense 1000
-		Energy/Nat Resource 2500
-		Finance/Insur/RealEst 28500
-		Health 35000
-		Lawyers & Lobbyists 34200
-		Transportation 3000
-		Misc Business 13500
-		Labor 65500
-		Ideology/Single-Issue 5500
+	candSector:
+		>>> print CRP.candSector.get(cid='N00007360',cycle='2010')
+		[{u'@attributes': {u'total': u'5000', u'indivs': u'0', u'sectorid': u'A', u'pacs': u'5000', u'sector_name': u'Agribusiness'}}, {u'@attributes': {u'total': u'13000', u'indivs': u'0', u'sectorid': u'B', u'pacs': u'13000', u'sector_name': u'Communic/Electronics'}}, {u'@attributes': {u'total': u'2500', u'indivs': u'0', u'sectorid': u'C', u'pacs': u'2500', u'sector_name': u'Construction'}}, {u'@attributes': {u'total': u'1000', u'indivs': u'0', u'sectorid': u'D', u'pacs': u'1000', u'sector_name': u'Defense'}}, {u'@attributes': {u'total': u'2500', u'indivs': u'0', u'sectorid': u'E', u'pacs': u'2500', u'sector_name': u'Energy/Nat Resource'}}, {u'@attributes': {u'total': u'28500', u'indivs': u'0', u'sectorid': u'F', u'pacs': u'28500', u'sector_name': u'Finance/Insur/RealEst'}}, {u'@attributes': {u'total': u'35000', u'indivs': u'0', u'sectorid': u'H', u'pacs': u'35000', u'sector_name': u'Health'}}, {u'@attributes': {u'total': u'34200', u'indivs': u'26700', u'sectorid': u'K', u'pacs': u'7500', u'sector_name': u'Lawyers & Lobbyists'}}, {u'@attributes': {u'total': u'3000', u'indivs': u'500', u'sectorid': u'M', u'pacs': u'2500', u'sector_name': u'Transportation'}}, {u'@attributes': {u'total': u'13500', u'indivs': u'3500', u'sectorid': u'N', u'pacs': u'10000', u'sector_name': u'Misc Business'}}, {u'@attributes': {u'total': u'65500', u'indivs': u'0', u'sectorid': u'P', u'pacs': u'65500', u'sector_name': u'Labor'}}, {u'@attributes': {u'total': u'5500', u'indivs': u'0', u'sectorid': u'Q', u'pacs': u'5500', u'sector_name': u'Ideology/Single-Issue'}}]
 
 Member Methods:
 	memTravelTrips:
-		>>> for trip in CRP.memTravelTrips.get(cid='N00000019',year='2006'):
-		...     print trip
-		Tamera S. Luzzatto Israel
-		Melissa Ho New York City, New York
-		Amitabh Desai New York, New York
-		Tamera S. Luzzatto Boston, Massachusetts
-		Tamera S. Luzzatto Binghamton, New York
-		Andrew Shapiro Binghamton, New York
-		Hillary Rodham Clinton Dulles, Virginia
-		Huma Abedin Dulles, Virginia
-		Gregory M. Walton Long Beach, California
-		Tamera S. Luzzatto Denver, Colorado
-		Laurie Rubiner Denver, Colorado
-		Huma Abedin Denver, Colorado
-		Hillary Rodham Clinton Denver, Colorado
-		Lorraine Voles Buffalo, New York
-		Laurie Rubiner Germany
-		Andrew Shapiro Montebello, New York
-		Huma Abedin New York, New York
-		Hillary Rodham Clinton New York, New York
-		Ann Gavaghan Durham, North Carolina
-		Kris M. Balderston New York, New York
-		Joshua Williams New York, New York
-		Huma Abedin Charleston, South Carolina
-		Hillary Rodham Clinton Charleston, South Carolina
+		>>> print CRP.memTravelTrips.get(cid='N00000019',year='2006')
+		[{u'@attributes': {u'guests': u'', u'relationship': u'', u'end_date': u'01/09/2006', u'destination': u'Israel', u'cost': u'4049.70', u'purpose': u'To observe security procedures and attend briefings.', u'traveler': u'Tamera S. Luzzatto', u'start_date': u'01/02/2006', u'sponsor': u'Jewish Community Relations Cncl/NY'}}, {u'@attributes': {u'guests': u'', u'relationship': u'', u'end_date': u'02/25/2006', u'destination': u'New York City, New York', u'cost': u'375.54', u'purpose': u'Strategic planning meetings, constituent meetings', u'traveler': u'Melissa Ho', u'start_date': u'02/23/2006', u'sponsor': u'Stone Barns Center for Food & Agricul'}}, {u'@attributes': {u'guests': u'', u'relationship': u'', u'end_date': u'04/11/2006', u'destination': u'New York, New York', u'cost': u'420.00', u'purpose': u'Participate in Congressional delegation to the United Nations', u'traveler': u'Amitabh Desai', u'start_date': u'04/07/2006', u'sponsor': u'Humpty Dumpty Institute'}}, {u'@attributes': {u'guests': u'', u'relationship': u'', u'end_date': u'04/20/2006', u'destination': u'Boston, Massachusetts', u'cost': u'759.77', u'purpose': u'Met with leaders of the Kennedy School of Government and give guest lectures at their Institute of Politics', u'traveler': u'Tamera S. Luzzatto', u'start_date': u'04/19/2006', u'sponsor': u'Institute of Politics at Harvard Univers'}}, {u'@attributes': {u'guests': u'', u'relationship': u'', u'end_date': u'06/12/2006', u'destination': u'Binghamton, New York', u'cost': u'526.00', u'purpose': u"Staff Senator Clinton's participation in ribbon-cutting ceremony of new Lockheed Martin facility generating jobs in New York.", u'traveler': u'Tamera S. Luzzatto', u'start_date': u'06/12/2006', u'sponsor': u'Lockheed Martin'}}, {u'@attributes': {u'guests': u'', u'relationship': u'', u'end_date': u'06/12/2006', u'destination': u'Binghamton, New York', u'cost': u'526.00', u'purpose': u"Staff Senator Clinton's participation in ribbon-cutting ceremony of new Lockheed Martin facility generating jobs in New York.", u'traveler': u'Andrew Shapiro', u'start_date': u'06/12/2006', u'sponsor': u'Lockheed Martin'}}, {u'@attributes': {u'guests': u'', u'relationship': u'', u'end_date': u'06/12/2006', u'destination': u'Dulles, Virginia', u'cost': u'385.00', u'purpose': u'Speaking engagement/Announcement', u'traveler': u'Hillary Rodham Clinton', u'start_date': u'06/12/2006', u'sponsor': u'Lockheed Martin'}}, {u'@attributes': {u'guests': u'', u'relationship': u'', u'end_date': u'06/12/2006', u'destination': u'Dulles, Virginia', u'cost': u'385.00', u'purpose': u'Speaking engagement/Announcement', u'traveler': u'Huma Abedin', u'start_date': u'06/12/2006', u'sponsor': u'Lockheed Martin'}}, {u'@attributes': {u'guests': u'', u'relationship': u'', u'end_date': u'06/25/2006', u'destination': u'Long Beach, California', u'cost': u'1278.39', u'purpose': u'Attend Annual Conference of the Society for the Psychological Study of Social Issues', u'traveler': u'Gregory M. Walton', u'start_date': u'06/22/2006', u'sponsor': u'Multiple Sponsors'}}, {u'@attributes': {u'guests': u'', u'relationship': u'', u'end_date': u'07/24/2006', u'destination': u'Denver, Colorado', u'cost': u'1868.35', u'purpose': u"In conjunction with the Senator's keynote speech at the DLC convention", u'traveler': u'Tamera S. Luzzatto', u'start_date': u'07/22/2006', u'sponsor': u'Democratic Leadership Council'}}, {u'@attributes': {u'guests': u'', u'relationship': u'', u'end_date': u'07/24/2006', u'destination': u'Denver, Colorado', u'cost': u'1846.15', u'purpose': u"In conjunction with the Senator's keynote speech at the DLC convention", u'traveler': u'Laurie Rubiner', u'start_date': u'07/22/2006', u'sponsor': u'Democratic Leadership Council'}}, {u'@attributes': {u'guests': u'', u'relationship': u'', u'end_date': u'07/24/2006', u'destination': u'Denver, Colorado', u'cost': u'1133.00', u'purpose': u"In conjunction with the Senator's keynote speech at the DLC Convention", u'traveler': u'Huma Abedin', u'start_date': u'07/23/2006', u'sponsor': u'Democratic Leadership Council'}}, {u'@attributes': {u'guests': u'', u'relationship': u'', u'end_date': u'07/24/2006', u'destination': u'Denver, Colorado', u'cost': u'1133.00', u'purpose': u'Keynote speech at the DLC Convention', u'traveler': u'Hillary Rodham Clinton', u'start_date': u'07/23/2006', u'sponsor': u'Democratic Leadership Council'}}, {u'@attributes': {u'guests': u'', u'relationship': u'', u'end_date': u'07/31/2006', u'destination': u'Buffalo, New York', u'cost': u'670.00', u'purpose': u'To staff Senator Clinton at &quot;Upstate New York Biotech Day,&quot; an event co-hosted by New Jobs for New York and Pfizer, where Sen. Clinton was a moderator and participant in panels.', u'traveler': u'Lorraine Voles', u'start_date': u'07/31/2006', u'sponsor': u'Pfizer Inc'}}, {u'@attributes': {u'guests': u'', u'relationship': u'', u'end_date': u'08/31/2006', u'destination': u'Germany', u'cost': u'2075.00', u'purpose': u'To participate in the Young Leader Conference hosted by American', u'traveler': u'Laurie Rubiner', u'start_date': u'08/25/2006', u'sponsor': u'American Council on Germany'}}, {u'@attributes': {u'guests': u'', u'relationship': u'', u'end_date': u'09/17/2006', u'destination': u'Montebello, New York', u'cost': u'188.61', u'purpose': u'Speech to members of Montebello Jewish Center congregation', u'traveler': u'Andrew Shapiro', u'start_date': u'09/16/2006', u'sponsor': u'Montebello Jewish Center'}}, {u'@attributes': {u'guests': u'', u'relationship': u'', u'end_date': u'09/21/2006', u'destination': u'New York, New York', u'cost': u'475.00', u'purpose': u'Speech and panel discussion', u'traveler': u'Huma Abedin', u'start_date': u'09/21/2006', u'sponsor': u'William J Clinton Foundation'}}, {u'@attributes': {u'guests': u'', u'relationship': u'', u'end_date': u'09/21/2006', u'destination': u'New York, New York', u'cost': u'900.00', u'purpose': u'Speech and panel discussion', u'traveler': u'Hillary Rodham Clinton', u'start_date': u'09/21/2006', u'sponsor': u'William J Clinton Foundation'}}, {u'@attributes': {u'guests': u'', u'relationship': u'', u'end_date': u'10/27/2006', u'destination': u'Durham, North Carolina', u'cost': u'700.60', u'purpose': u'To present at and attend the Duke Environmental Law and Policy Forum', u'traveler': u'Ann Gavaghan', u'start_date': u'10/26/2006', u'sponsor': u'Multiple Sponsors'}}, {u'@attributes': {u'guests': u'', u'relationship': u'', u'end_date': u'', u'destination': u'New York, New York', u'cost': u'376.59', u'purpose': u'To speak at a conference to university presidents about upstate issues and economic development.', u'traveler': u'Kris M. Balderston', u'start_date': u'11/30/2006', u'sponsor': u'Commission on Indpt Colleges & Univs'}}, {u'@attributes': {u'guests': u'', u'relationship': u'', u'end_date': u'12/18/2006', u'destination': u'New York, New York', u'cost': u'526.80', u'purpose': u'Hedge Fund site visits - to discuss policy and regulation issues with hedge fund professionals', u'traveler': u'Joshua Williams', u'start_date': u'12/18/2006', u'sponsor': u'Managed Funds Assn'}}, {u'@attributes': {u'guests': u'', u'relationship': u'', u'end_date': u'01/01/2006', u'destination': u'Charleston, South Carolina', u'cost': u'380.00', u'purpose': u'Speaking engagement and seminars', u'traveler': u'Huma Abedin', u'start_date': u'12/30/2005', u'sponsor': u'Renaissance Weekend'}}, {u'@attributes': {u'guests': u'', u'relationship': u'', u'end_date': u'01/01/2006', u'destination': u'Charleston, South Carolina', u'cost': u'380.00', u'purpose': u'Speaking engagement and seminars', u'traveler': u'Hillary Rodham Clinton', u'start_date': u'12/30/2005', u'sponsor': u'Renaissance Weekend'}}]
