@@ -12,11 +12,14 @@ __version__ = "0.1.0"
 __copyright__ = "Copyright (c) 2009 Sunlight Labs"
 __license__ = "BSD"
 
-import urllib, urllib2
+import urllib, urllib2, socket
 try:
     import json
 except ImportError:
     import simplejson as json
+
+# Timeout in seconds to wait for response from API
+TIMEOUT = 10
 
 class CRPApiError(Exception):
     """ Exception for CRP API errors """
@@ -40,12 +43,14 @@ class CRP(object):
         url = 'http://api.opensecrets.org/?method=%s&output=json&apikey=%s&%s' % \
               (func, CRP.apikey, urllib.urlencode(params))
         try:
-            response = urllib2.urlopen(url).read()
+            response = urllib2.urlopen(url, None, TIMEOUT).read()
             return json.loads(response)['response']
         except urllib2.HTTPError, e:
             raise CRPApiError(e.read())
         except (ValueError, KeyError), e:
             raise CRPApiError('Invalid Response')
+        except socket.timeout:
+            raise CRPApiError('Request timed out')
 
     class candSummary(object):
         @staticmethod
