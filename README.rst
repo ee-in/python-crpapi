@@ -13,7 +13,7 @@ All code is under a BSD-style license, see LICENSE for details.
 Requirements
 ============
 
-python >= 2.4
+python >= 2.6
 
 simplejson >= 1.8 (not required with python 2.6, will use built in json module)
 
